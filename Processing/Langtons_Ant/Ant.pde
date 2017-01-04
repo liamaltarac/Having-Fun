@@ -33,7 +33,7 @@ class Ant{
        case EAST: direction=NORTH; break; 
        case WEST: direction=SOUTH; break;      
      }
-     println(direction);
+    // println(direction);
    }
    
    void move(){
