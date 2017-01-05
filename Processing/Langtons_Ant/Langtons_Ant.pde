@@ -11,6 +11,7 @@ int counter = 0;
 
 int prevCols;
 int prevRows;
+boolean started = false;
 
 void setup() {
   size(800,800);
@@ -22,14 +23,32 @@ void setup() {
       grid[i][j] = new Cell(i*(width/rows),j*(height/cols), height/cols, height/cols);
     }
   }
+
 }
 
 void draw() {
-  frameRate(4000);
   noStroke();
   background(0);
   
-  
+      if(!started){
+   
+    
+      for(int k = -1; k<=20; k++){
+   for(int l = -1; l<=20; l++){
+          grid[mouseX/4][mouseY/4].setColor();
+   }
+  }
+    
+    if(key == ENTER)
+      started = true;
+    
+for(int i=1; i<rows-1; i++){
+    for(int j=1; j<cols-1; j++){
+        grid[i][j].display(); }}
+
+}
+
+else{
   
   for (int i = 0; i < cols; i++) {
     for (int j = 0; j < rows; j++) {
@@ -50,5 +69,7 @@ void draw() {
   grid[ant.getXPos()][ant.getYPos()].toggle();
   ant.move();
   
+
+}
 
 }

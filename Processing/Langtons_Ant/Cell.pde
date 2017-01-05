@@ -25,7 +25,7 @@ class Cell{
   }
   
   void setColor(){
-    c = c^255; 
+    c = 255; 
     display();
   }
   
