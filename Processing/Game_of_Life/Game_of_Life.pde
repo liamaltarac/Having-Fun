@@ -21,7 +21,7 @@ int numNeighbours(Cell[][] g, int i, int j){
 
 void setup(){
   
-  size(800,800, P3D);
+  size(800,800);
  
   grid = new Cell[cols][rows];
   oldGrid = new Cell[cols][rows];
@@ -49,6 +49,7 @@ void setup(){
 
 
 void draw(){
+  frameRate(10);
   background(0);
   noStroke();
   
